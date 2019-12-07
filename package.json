@@ -4,7 +4,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "parcel src/index.html",
-    "build": "parcel build src/index.html",
+    "prebuild": "rimraf dist/*",
+    "build": "parcel build src/index.html --public-url .",
     "lint": "lynt"
   },
   "husky": {
@@ -31,6 +32,7 @@
     "lint-staged": "^9.5.0",
     "lynt": "^0.5.5",
     "parcel-bundler": "^1.12.4",
+    "rimraf": "^3.0.0",
     "sass": "^1.23.7"
   }
 }
