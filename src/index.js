@@ -1,11 +1,11 @@
-import { h, app } from "hyperapp";
+import { app } from "hyperapp";
 
 const increment = state => ({...state, num: state.num + state.step});
 const decrement = state => ({...state, num: state.num - state.step});
 
 app({
   init: {
-    title: 'カウント',
+    title: 'カウント！',
     num: 0,
     step: 5
   },
