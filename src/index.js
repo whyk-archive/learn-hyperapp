@@ -1,12 +1,13 @@
 import { h, app } from "hyperapp";
 
-const increment = state => ({...state, num: state.num + 1});
-const decrement = state => ({...state, num: state.num - 1});
+const increment = state => ({...state, num: state.num + state.step});
+const decrement = state => ({...state, num: state.num - state.step});
 
 app({
   init: {
     title: 'カウント',
     num: 0,
+    step: 5
   },
   view: state => (
     <main class="container">
