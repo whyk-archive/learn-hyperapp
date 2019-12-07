@@ -15,8 +15,10 @@ app({
   view: state => (
     <main class="container">
       <h1>{state.title}</h1>
+      <label class="label">
+        タイトル変更：<input class="input" type="text" onChange={[actions.textchange, e => e.target.value]} />
+      </label>
       <h2>{state.num}</h2>
-      <input type="text" onChange={[actions.textchange, e => e.target.value]} />
       <button class="button decrement" onclick={actions.decrement}>ー</button>
       <button class="button increment" onclick={actions.increment}>＋</button>
     </main>
