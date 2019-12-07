@@ -1,4 +1,4 @@
-import { app } from "hyperapp";
+import { h, app } from "hyperapp";
 
 const increment = state => ({...state, num: state.num + state.step});
 const decrement = state => ({...state, num: state.num - state.step});
