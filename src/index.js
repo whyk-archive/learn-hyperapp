@@ -9,11 +9,11 @@ app({
     num: 0,
   },
   view: state => (
-    <main>
+    <main class="container">
       <h1>{state.title}</h1>
       <h2>{state.num}</h2>
-      <button onclick={decrement}>-</button>
-      <button onclick={increment}>+</button>
+      <button class="button decrement" onclick={decrement}>ー</button>
+      <button class="button increment" onclick={increment}>＋</button>
     </main>
   ),
   node: document.getElementById("app")
