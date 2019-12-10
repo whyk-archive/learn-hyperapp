@@ -33,6 +33,7 @@
     "lynt": "^0.5.5",
     "parcel-bundler": "^1.12.4",
     "rimraf": "^3.0.0",
-    "sass": "^1.23.7"
+    "sass": "^1.23.7",
+    "typescript": "^3.7.3"
   }
 }
