@@ -9,4 +9,4 @@ parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcel
 },{"hyperapp":"xJOT"}],"zo2T":[function(require,module,exports) {
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0});var e=require("hyperapp"),t=require("./actions/count"),n=require("./actions/domchange"),r=require("./components/countBtn"),a={title:"カウント！",num:0,step:5},c={increment:t.increment,decrement:t.decrement,textchange:n.textchange},u=function(t){return e.h("main",{className:"container"},e.h("h1",null,t.title),e.h("label",{className:"label"},"タイトル変更：",e.h("input",{className:"input",type:"text",onChange:[c.textchange,function(e){return e.target.value}]})),e.h("h2",null,t.num),e.h(r.CountBtn,{actions:c}))},i=document.querySelector("#app");e.app({init:a,view:u,node:i});
 },{"hyperapp":"xJOT","./actions/count":"wZpc","./actions/domchange":"IrFf","./components/countBtn":"Ic91"}]},{},["zo2T"], null)
-//# sourceMappingURL=src.760169d1.js.map
+//# sourceMappingURL=src.1830533c.js.map
