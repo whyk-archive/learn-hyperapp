@@ -1,33 +1,28 @@
 import { h, app } from "hyperapp";
+import { increment, decrement } from './actions/count';
+import { textchange } from './actions/domchange';
+import { CountBtn } from './components/countBtn';
+import { State } from './utils/interface';
 
-interface State {
-  title: string,
-  num: number,
-  step: number
+const init: State = {
+  title: 'カウント！',
+  num: 0,
+  step: 5
 }
 
-const actions = {
-  increment: (state: State) => ({...state, num: state.num + state.step}),
-  decrement: (state: State) => ({...state, num: state.num - state.step}),
-  textchange: (state: State, payload: string) => ({...state, title: payload})
-}
+const actions = {increment, decrement, textchange};
 
-app({
-  init: {
-    title: 'カウント！',
-    num: 0,
-    step: 5
-  },
-  view: (state: State) => (
-    <main className="container">
-      <h1>{state.title}</h1>
-      <label className="label">
-        タイトル変更：<input className="input" type="text" onChange={[actions.textchange, e => e.target.value]} />
-      </label>
-      <h2>{state.num}</h2>
-      <button className="button decrement" onclick={actions.decrement}>ー</button>
-      <button className="button increment" onclick={actions.increment}>＋</button>
-    </main>
-  ),
-  node: document.getElementById("app")
-});
+const view = (state: State) => (
+  <main className="container">
+    <h1>{state.title}</h1>
+    <label className="label">
+      タイトル変更：<input className="input" type="text" onChange={[actions.textchange, e => e.target.value]} />
+    </label>
+    <h2>{state.num}</h2>
+    <CountBtn actions={actions}></CountBtn>
+  </main>
+)
+
+const node = document.querySelector('#app');
+
+app({init, view, node});
