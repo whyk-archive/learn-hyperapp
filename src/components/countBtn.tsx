@@ -1,8 +1,6 @@
 import { h, app } from "hyperapp";
 import { Actions } from '../utils/interface';
 
-
-
 export const CountBtn = ({ actions }: {actions: Actions}) => {
   return (
     <div>
@@ -11,4 +9,3 @@ export const CountBtn = ({ actions }: {actions: Actions}) => {
     </div>
   )
 }
-
